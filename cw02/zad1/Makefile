@@ -26,3 +26,7 @@ lib_shuffle_file:all
 	cat testFile
 	./$(OUT) lib shuffle testFile 10 10
 	cat testFile
+
+.PHONY=clean
+clean:
+	rm -f *.out
