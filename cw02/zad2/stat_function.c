@@ -42,13 +42,7 @@ void print_stat(struct stat * file_stat, char * name_file,char * directory_path)
 
 }
 
-char * create_path(char * path, char * dir_name) {
-  char * dir_path = (char*) calloc(strlen(path)+strlen(dir_name)+1 ,sizeof(char));
-  strcpy(dir_path, path);
-  strcat(dir_path,"/");
-  strcat(dir_path, dir_name);
-  return dir_path;
-}
+
 
 void search_dir(char * path, int  * max_size) {
   char * directory_path;
@@ -63,9 +57,14 @@ void search_dir(char * path, int  * max_size) {
 
   while ((dp = readdir(dirp)) != NULL) {
       if (strcmp(dp->d_name,"..")!=0 && strcmp(dp->d_name,".")!=0) {
-        directory_path = create_path(path,dp->d_name);
-        lstat(directory_path,file_stat);
 
+
+        directory_path = (char*) calloc(strlen(path)+strlen(dp->d_name)+2 ,sizeof(char)); //one more char for '\0'
+        strcpy(directory_path, path);
+        strcat(directory_path,"/");
+        strcat(directory_path, dp->d_name);
+
+        lstat(directory_path,file_stat);
         if( S_ISDIR(file_stat->st_mode) ){
           search_dir(directory_path,max_size);
         }
@@ -73,10 +72,12 @@ void search_dir(char * path, int  * max_size) {
           print_stat(file_stat,dp->d_name   ,directory_path);
 
         }
+        free(directory_path);
       }
     }
 
     closedir(dirp);
+    free(file_stat);
 
 }
 
