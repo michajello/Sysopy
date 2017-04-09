@@ -1,0 +1,116 @@
+Wyniki przeprowadzonych operacji dla:
+Biblioteki ładowanej statycznie dla list:
+Creating list
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Added 1000 contacts
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+List was sorted
+CPU time: sec user: 0.000004000 ,sec system  0.000000000 real time :0.000004000
+Found "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Found "pesimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "pesymistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Time of working program
+CPU time: sec user: 0.000004000 ,sec system  0.000000000 real time :0.000004000
+
+
+Biblioteki dzielonej dla list:
+Creating list
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Added 1000 contacts
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+List was sorted
+CPU time: sec user: 0.000008000 ,sec system  0.000000000 real time :0.000008000
+Found "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Found "pesimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "pesymistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Time of working program
+CPU time: sec user: 0.000008000 ,sec system  0.000000000 real time :0.000008000
+
+Biblioteki ładowane dynamiczne dla list:
+Creating list
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Added 1000 contacts
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+List was sorted
+CPU time: sec user: 0.000004000 ,sec system  0.000000000 real time :0.000004000
+Found "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Found "pesimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "pesymistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Time of working program
+CPU time: sec user: 0.000004000 ,sec system  0.000000000 real time :0.000004000
+
+Biblioteki dla drzew ładowanej statycznie:
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Added 1000 contacts
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Tree was sorted by another key
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Found "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Found "pesimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "pesymistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Time of working program
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+
+Biblioteki dzielonej dla drzew :
+Created tree
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Added 1000 contacts
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Tree was sorted by another key
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Found "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Found "pesimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "pesymistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Time of working program
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+
+
+
+Biblioteki ładowanej dynamicznie dla drzew:
+Created tree
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Added 1000 contacts
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Tree was sorted by another key
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Found "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Found "pesimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "optimistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Removed "pesymistic" contact
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+Time of working program
+CPU time: sec user: 0.000000000 ,sec system  0.000000000 real time :0.000000000
+
+3b)
+Czas wykonywania operacji dla bibliotek z implementacją drzewa nie zmienia się wraz
+ze wzrostem parametru optymalizacji, ponieważ dla parametru -O0 czas działania testujacego programu
+jest równy 0.000000000 . Natomiast wraz ze wzrostem optymalizacji czas działania
+dla programu testujacego listy zmalał z 0.000008000 do 0.000004000 dla biblioteki dzielonej oraz ładowanej statycznie.

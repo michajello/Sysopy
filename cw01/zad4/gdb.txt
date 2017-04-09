@@ -1,0 +1,20 @@
+Aby zrzucic Cora nalezało usunac warunek sprawdzający czy dane w ksiazce sa nullami  i recznie dodac contact z nullowymi wartosciami dla imienia i nazwiska
+a następnie dokonać próby posortowania względem imienia. Wtedy dokonamy odczytu z NULLa co spowoduje
+naruszenie ochrony pamieci.
+
+Program skompilowałem z opcja -ggdb do debugowania.
+Po odpaleniu programu pod gdb dostalem rezultat:
+
+
+Program received signal SIGSEGV, Segmentation fault.
+0x00007ffff7bd523a in insert_in_order () from lib/libstlist.so
+
+Szczegóły
+(gdb) where
+#0  0x00007ffff7bd523a in insert_in_order () from lib/libstlist.so
+#1  0x00007ffff7bd534a in sort_list () from lib/libstlist.so
+#2  0x000000000040e34d in main (argc=1, argv=0x7fffffffdf08) at src/testList.c:1078
+
+A jest to wina tego oto warunku w insert_in_order():
+ if (comparator(nodeToInsert->data[(*sortedList)->key], (*sortedList)->head->data[(*sortedList)->key]) < 0)
+ poniewaz nodeToInsert->data[(*sortedList)->key] odwołuje się do null
