@@ -1,0 +1,4 @@
+#test ./test.out
+ls -l /etc
+$test
+ls -a
