@@ -1,0 +1,147 @@
+
+1.Dla rekordów 4 bajtowych:
+
+Sortowanie:
+a)2500 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000612000 ,sec system  2.000292000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000132000 ,sec system  2.000880000
+
+b)7000 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 4.000376000 ,sec system  16.000500000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 1.000184000 ,sec system  21.000576000
+
+Permutowanie:
+a)2500 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000004000 ,sec system  0.000008000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000000000 ,sec system  0.000004000
+
+b)7000 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000000000 ,sec system  0.000032000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000000000 ,sec system  0.000020000
+
+
+
+2.Dla rekodów 512 bajtowych:
+
+Sortowanie
+
+a) 2500 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000672000 ,sec system  2.000596000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000132000 ,sec system  2.000880000
+
+b)7000 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 5.000404000 ,sec system  19.000748000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 1.000200000 ,sec system  23.000944000
+
+Permutowanie:
+
+a) 2500 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000004000 ,sec system  0.000012000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000000000 ,sec system  0.000004000
+
+b)7000 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000008000 ,sec system  0.000024000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000000000 ,sec system  0.000016000
+
+
+3.Dla rekordów 1024 bajtowych:
+
+Sortowanie
+
+a) 2500 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000900000 ,sec system  3.000148000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000132000 ,sec system  3.000536000
+
+
+b)7000 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 7.000172000 ,sec system  24.000312000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 1.000192000 ,sec system  27.000684000
+
+Permutowanie:
+
+a) 2500 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000004000 ,sec system  0.000016000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000000000 ,sec system  0.000020000
+
+
+b)7000 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000008000 ,sec system  0.000028000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000004000 ,sec system  0.000016000
+
+
+4.Dla rekordów 4096 bajtowych:
+
+Sortowanie
+
+a) 2500 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 1.000628000 ,sec system  10.000624000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000140000 ,sec system  5.000972000
+
+
+b)7000 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 12.000280000 ,sec system  86.000276000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 1.000324000 ,sec system  46.000688000
+
+
+Permutowanie:
+
+a) 2500 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000000000 ,sec system  0.000012000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000000000 ,sec system  0.000004000
+
+
+b)7000 rekordów
+
+*Przy użyciu funkcji biblioteki C:
+CPU time: sec user: 0.000016000 ,sec system  0.000044000
+*Przy użyciu funkcji systemowych:
+CPU time: sec user: 0.000000000 ,sec system  0.000036000
+
+
+Czasy rzeczywiste dla programow z malymi rekordami są zblizone do siebie. Jednak w ostatnim tescie
+latwo zauwazyc zdecydowana roznicena korzysc funkcji systemowych
