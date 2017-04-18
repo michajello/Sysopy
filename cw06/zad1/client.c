@@ -16,6 +16,13 @@ int id_from_server;
 char buffer [MESSAGE_LENGTH];
 my_msgbuf msg;
 
+void remove_queue(int qid) {
+    if (msgctl(qid, IPC_RMID, NULL) == -1) {
+        perror("Removing queue");
+    }
+    printf("removed_queue   \n" );
+}
+
 bool is_server_queue_allowed (){
     if (( server_qid = msgget(KEY_SERVER, IPC_CREAT|IPC_EXCL|0600)) == -1) {
         if (errno == EEXIST) {
@@ -38,16 +45,16 @@ void open_server_queue() {
     }
     else {
         fprintf(stderr, "Cannot find server queue with id=%d\n",server_qid );
+        remove_queue(server_qid);
         exit(EXIT_FAILURE);
     }
-    printf("Founde server queue wit id: %d\n", server_qid);
+    printf("Found server queue wit id: %d\n", server_qid);
 }
 void get_queue_key(key_t * key) {
     if ((*key = ftok(".",getpid())) == -1) {
         perror("Key");
         exit(EXIT_FAILURE);
     }
-
 }
 
 void create_own_queue() {
@@ -76,7 +83,6 @@ void send_queue_id_to_server() {
     msg.mtype=CREATED_QUEUE;
     msg.pid=getpid();
     int_to_char(msg.message, self_qid);
-    printf("%s\n", msg.message);
     send_prepared_message();
 }
 
@@ -104,55 +110,48 @@ void send_request_finish() {
     send_prepared_message();
 }
 
-void printf_message() {
-    printf("Received message from server: type=\n" );
+void print_message() {
+    printf("Received message from server: type=" );
     printf((msg.mtype == ECHO) ? "ECHO" : "");
     printf((msg.mtype == TO_UPPER_CASE) ? "TO_UPPER_CASE" : "");
     printf((msg.mtype == TIME) ? "TIME" : "");
     printf((msg.mtype == CREATED_QUEUE) ? "CREATED_QUEUE" : "");
+    printf("\nMessage: \"%s\"\n\n",msg.message );
 }
 
 void receive_id_from_server() {
     while (msgrcv(self_qid, &msg, sizeof(msg), CREATED_QUEUE, 0) == -1) {
         perror("Cannot receive first message ");
-        // usleep(100);
+         usleep(100);
     }
     id_from_server=atoi(msg.message);
+    print_message();
 }
 
 void receive_message() {
     if (msgrcv(self_qid, &msg, sizeof(msg), 0, 0) == -1) {
-        printf_message();
+        perror("Cannot receive message ");
     }
+    print_message();
 }
-
-void self_queue_remove() {
-    if (msgctl(self_qid, IPC_RMID, NULL) == -1) {
-        perror("Removing queue");
-    }
-    printf("removed_queue   \n" );
-}
-
-
 
 void send_messages() {
-    printf("%d\n", self_qid);
     msg.pid=getpid();
     send_request_echo();
-    // receive_message();
+    receive_message();
     send_request_to_upper_case();
+    receive_message();
     send_request_time();
+    receive_message();
     send_request_finish();
-    sleep(1);
 }
 
 int main(int argc, char const *argv[]) {
     open_server_queue();
     create_own_queue();
-    // modify_queue_perm();
-    // receive_id_from_server();
     send_queue_id_to_server();
+    receive_id_from_server();
     send_messages();
-    self_queue_remove();
+    remove_queue(self_qid);
     return 0;
 }

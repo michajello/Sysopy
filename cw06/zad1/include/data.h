@@ -1,6 +1,6 @@
 #ifndef data_header
 #define  data_header
-#define MAX_PROCESSES_NUMBER 64
+#define MAX_CLIENT_NUMBER 64
 
 #define KEY_SERVER 123
 #define MESSAGE_LENGTH 1024
